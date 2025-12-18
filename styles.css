@@ -86,7 +86,7 @@ body {
       rgba(255,255,255,0.92),
       rgba(255,255,255,0.92)
     ),
-    url("/assets/white_wall.webp");
+    url("assets/white_wall.webp");
 
   background-repeat: repeat;
   background-size: 600px auto;

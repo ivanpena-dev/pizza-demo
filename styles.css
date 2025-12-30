@@ -474,4 +474,224 @@ footer {
     text-align: center;
   }
 }
+/* ================================
+   ENTER EXPERIENCE (enter.html)
+   ================================ */
+
+.enter-page {
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.enter-wrap {
+  padding-top: 96px;
+  min-height: 100vh;
+}
+
+.enter-scene {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 55%),
+              linear-gradient(180deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+  position: relative;
+}
+
+/* FRONT VIEW */
+.enter-front {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 1.25rem;
+  position: relative;
+}
+
+.enter-sign {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.enter-sign img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.enter-sign-title {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.enter-sign-sub {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.9rem;
+}
+
+/* DOOR */
+.enter-door {
+  width: min(320px, 78vw);
+  height: min(520px, 120vw);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.35));
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transform-style: preserve-3d;
+}
+
+.door-panel {
+  position: absolute;
+  inset: 14px;
+  border-radius: 14px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.08) 0px,
+    rgba(255,255,255,0.08) 10px,
+    rgba(0,0,0,0.05) 10px,
+    rgba(0,0,0,0.05) 20px
+  );
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.door-handle {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  width: 34px;
+  height: 10px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* INSIDE VIEW */
+.enter-inside {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 1.25rem;
+  opacity: 0;
+  transform: scale(1.02);
+  pointer-events: none;
+}
+
+.inside-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(198,40,40,0.25), transparent 55%);
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+/* MENU BOARD */
+.menu-board {
+  width: min(900px, 100%);
+  background: rgba(15,15,15,0.88);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 1.6rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+}
+
+.menu-board-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu-board-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.menu-board-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.menu-board-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.menu-board-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.menu-board-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.menu-board-card p {
+  color: rgba(255,255,255,0.78);
+  line-height: 1.45;
+}
+
+.menu-board-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ANIMATIONS */
+.enter-scene.entering .enter-door {
+  animation: doorZoom 900ms ease forwards;
+  transform-origin: center;
+}
+
+@keyframes doorZoom {
+  0%   { transform: scale(1) translateZ(0); filter: brightness(1); }
+  55%  { transform: scale(1.06) translateZ(0); filter: brightness(1.05); }
+  100% { transform: scale(1.30) translateZ(0); filter: brightness(1.1); opacity: 0; }
+}
+
+.enter-scene.entered .enter-front {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease;
+}
+
+.enter-scene.entered .enter-inside {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+/* MOBILE TUNING */
+@media (max-width: 720px) {
+  .menu-board-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-board {
+    padding: 1.25rem;
+  }
+}
 

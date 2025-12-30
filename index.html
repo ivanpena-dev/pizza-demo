@@ -1,188 +1,339 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Lil Bella’s Pizza</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+<body class="theme-pizza">
 
-<body>
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Lil Bella’s Pizza Home">
+        <img class="brand-logo" src="assets/logo.png" alt="Lil Bella’s Pizza logo" />
+        <span class="brand-name">Lil Bella’s Pizza</span>
+      </a>
 
-<header class="navbar">
-  <div class="container nav-inner">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Bella’s Pizza" class="logo-img" />
-      <span class="brand-name">Lil Bella’s Pizza</span>
+      <nav class="nav" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#lunch">Lunch</a>
+        <a href="#specials">Specials</a>
+        <a href="bbq.html">BBQ_Catering</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a class="btn btn-primary topbar-cta" href="#order">Order</a>
     </div>
+  </header>
 
-    <nav class="nav-links">
-      <a href="#menu">Menu</a>
-      <a href="bbq.html">BBQ Catering</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </nav>
-  </div>
-</header>
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero hero-light">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Little Bella’s Pizza</div>
+          <h1>Freshness<br/>in every bite</h1>
+          <p class="sub">“Life Without Pizza… I Think Not!”</p>
 
-<section class="hero hero-light">
-  <div class="container hero-grid-light">
+          <div class="hero-actions" id="order">
+            <a class="btn btn-primary" href="https://www.doordash.com/store/lil-bellas-pizza-la-salle-29955287/43664949/?pickup=true" target="_blank" rel="noopener">Order Online</a>
+            <a class="btn btn-secondary" href="tel:+18152201909">Call: (815) 220-1909</a>
+          </div>
 
-    <div class="hero-text">
-      <span class="hero-eyebrow">Lil Bella’s Pizza</span>
-      <h1>Freshness<br>in every bite</h1>
-      <p class="hero-sub">
-        Life without pizza… <strong>I think not!</strong>
-      </p>
+          <div class="hero-meta">
+            <div class="meta-pill">Delivery & Carry-Out</div>
+            <div class="meta-pill">814 1st Street, LaSalle</div>
+          </div>
+        </div>
 
-      <div class="hero-actions">
-        <a href="#menu" class="btn primary">View Menu</a>
-        <a href="#contact" class="btn secondary">Order / Call</a>
-        <a href="enter.html" class="btn primary">Enter Lil Bella’s</a>
+        <div class="hero-card" aria-label="Bella’s Pizza Logo Feature">
+          <img class="hero-logo" src="assets/image.png" alt="Lil Bella’s Pizza logo mark" />
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="hero-logo">
-      <img src="assets/logo.png" alt="Bella’s Pizza Logo" />
-    </div>
-
-  </div>
-</section>
-
-<section id="menu" class="menu">
-  <div class="container">
-    <h2>Menu Highlights</h2>
-    <p class="menu-lead">Easy favorites — full menu available below.</p>
-
-    <div class="menu-highlights">
-      <article class="menu-tile">
-        <div class="menu-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 3c4.5 0 8.5 3 9.5 7.3L12 21 2.5 10.3C3.5 6 7.5 3 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M2.5 10.3H21.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+    <!-- Menu -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-head">
+          <h2>Menu</h2>
+          <p class="section-sub">Built for clarity. Clean, readable, and phone-friendly.</p>
         </div>
-        <h3>Specialty Pizzas</h3>
-        <p>Everything • Supreme • Famous Smoked Ribeye • Chicken Parm</p>
-        <div class="menu-meta">Build Your Own • Thin • Deep Dish • Stuffed</div>
-      </article>
 
-      <article class="menu-tile">
-        <div class="menu-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 4c4 2 6 6 6 10s-2 8-6 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M17 4c-4 2-6 6-6 10s2 8 6 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+        <!-- Sticky Order Bar -->
+        <div class="orderbar" role="region" aria-label="Quick order actions">
+          <div class="orderbar-left">
+            <div class="orderbar-title">Ready to Order?</div>
+            <div class="orderbar-sub">Fast pickup • Local delivery • Call-in available</div>
+          </div>
+          <div class="orderbar-actions">
+            <a class="btn btn-primary" href="https://www.doordash.com/store/lil-bellas-pizza-la-salle-29955287/43664949/?pickup=true" target="_blank" rel="noopener">Order Online</a>
+            <a class="btn btn-secondary" href="tel:+18152201909">Call to Order</a>
+          </div>
         </div>
-        <h3>Appetizers</h3>
-        <p>Breadsticks • Wings • Garlic Nuggets • Mozzarella Sticks</p>
-        <div class="menu-meta">Perfect for groups & game nights</div>
-      </article>
 
-      <article class="menu-tile">
-        <div class="menu-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 6h10M6 10h12M7 14h10M8 18h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M6 4c-2 2-2 14 0 16s12 2 12 0 4-14 2-16-12-2-14 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          </svg>
+        <div class="menu-grid">
+          <!-- Specialty Pizzas -->
+          <article class="card">
+            <h3>Specialty Pizzas</h3>
+            <ul class="items">
+              <li><span class="name">Everything</span><span class="desc">Sausage, Mushroom, Pepperoni, Onion, Green Pepper, Black Olive, Green Olive, Canadian Bacon</span></li>
+              <li><span class="name">Supreme</span><span class="desc">Sausage, Mushroom, Pepperoni, Onion, Green Pepper, Black Olive</span></li>
+              <li><span class="name">Famous Smoked Ribeye</span><span class="desc">Garlic Butter Crust, Smoked Ribeye, choice of A1 or Horseradish on the side</span></li>
+              <li><span class="name">Cheeseburger</span><span class="desc">Burger Sauce, Ground Beef, Onion, Tomato, Pickles <em class="note">+ Add Bacon for additional charge</em></span></li>
+              <li><span class="name">Chicken Parm</span><span class="desc">Garlic Butter, Chicken Chunks tossed in Marinara</span></li>
+              <li><span class="name">Chicken Bacon BBQ</span><span class="desc">BBQ Sauce, Grilled Chicken, Bacon</span></li>
+              <li><span class="name">Chicken Bacon Ranch</span><span class="desc">Ranch, Grilled Chicken, Bacon, Tomato, Onion</span></li>
+              <li><span class="name">Pickle</span><span class="desc">Garlic Butter, Pickles</span></li>
+              <li><span class="name">Italian Beef</span><span class="desc">Italian Beef, Hot or Mild Giardiniera</span></li>
+            </ul>
+          </article>
+
+          <!-- Build Your Own -->
+          <article class="card">
+            <h3>Build Your Own</h3>
+
+            <div class="table-wrap" role="region" aria-label="Build your own pricing">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Pizza</th>
+                    <th>Big Bella</th>
+                    <th>X-Large</th>
+                    <th>Large</th>
+                    <th>Medium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Thin Cheese Pizza</td>
+                    <td class="price">25.50</td>
+                    <td class="price">22.00</td>
+                    <td class="price">18.25</td>
+                    <td class="price">14.50</td>
+                  </tr>
+                  <tr>
+                    <td>Deep Dish Cheese</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">21.25</td>
+                    <td class="price">17.50</td>
+                  </tr>
+                  <tr>
+                    <td>Stuffed Cheese</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">23.25</td>
+                    <td class="price">19.50</td>
+                  </tr>
+                  <tr>
+                    <td>Gluten Free Crust</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">17.00</td>
+                  </tr>
+                  <tr>
+                    <td>Cauliflower Crust</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">—</td>
+                    <td class="price">15.00</td>
+                  </tr>
+                  <tr>
+                    <td>Additional Toppings</td>
+                    <td class="price">2.25</td>
+                    <td class="price">2.00</td>
+                    <td class="price">1.80</td>
+                    <td class="price">1.50</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="split">
+              <div class="subcard">
+                <h4>Toppings</h4>
+                <p>Sausage, Pepperoni, Mushroom, Onion, Green Pepper, Bacon, Black or Green Olives, Canadian Bacon, Ground Beef, Tomato, Pineapple, Jalapeno, Anchovies, Banana Peppers, Hot or Mild Giardiniera, Pepperoncini</p>
+                <p class="muted"><strong>Double Charge:</strong> Chicken, Italian Beef, Meatballs</p>
+              </div>
+              <div class="subcard">
+                <h4>Bella Rolls</h4>
+                <div class="rolls">
+                  <div class="roll-row"><span>Small</span><span class="price">19.25</span></div>
+                  <div class="roll-row"><span>Medium</span><span class="price">22.50</span></div>
+                  <div class="roll-row"><span>Large</span><span class="price">26.75</span></div>
+                </div>
+                <div class="divider"></div>
+                <p><strong>Beef Roll:</strong> Fresh made dough stuffed with garlic sauce, Italian Beef, and 100% real cheese. Served with a side of Au Jus.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Appetizers -->
+          <article class="card">
+            <h3>Appetizers</h3>
+            <ul class="items">
+              <li><span class="name">Breadsticks</span><span class="desc">Small or Large</span></li>
+              <li><span class="name">Chicken Parm Breadsticks</span><span class="desc">Fresh breadsticks topped with chunks of chicken tossed in marinara</span></li>
+              <li><span class="name">Garlic Nuggets</span><span class="desc">Bella’s garlic nuggets topped with secret garlic spice</span></li>
+              <li><span class="name">Boneless Wings</span><span class="desc">Choice of Mild, Hot, Honey BBQ, or Garlic Parmesan</span></li>
+              <li><span class="name">Chicken Tenders</span><span class="desc">Deep fried breast fillets</span></li>
+              <li><span class="name">Cauliflower</span><span class="desc">Fried in a cheddar cheese breading</span></li>
+              <li><span class="name">Mozzarella Sticks</span><span class="desc">Deep fried mozzarella in Italian breading</span></li>
+              <li><span class="name">Poppers</span><span class="desc">Deep fried jalapeños stuffed with cream cheese</span></li>
+              <li><span class="name">Fries</span><span class="desc">Classic fries</span></li>
+            </ul>
+          </article>
+
+          <!-- Sandwiches / Beverages / Extras / Pasta -->
+          <article class="card">
+            <h3>Sandwiches</h3>
+            <ul class="items compact">
+              <li><span class="name">Italian Beef Sub</span><span class="desc">Italian beef on bun, mozzarella, hot or mild giardiniera peppers, served with fries</span></li>
+              <li><span class="name">Tenderloin</span><span class="desc">Giant pork tenderloin on bun. Served with fries, onion, pickle, tomato, and Bella’s homemade sauce</span></li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3 class="mt">Beverages</h3>
+            <p class="muted">Cans: Coke, Dr Pepper, Coke, Sprite, Mt. Dew, Root Beer, Dr. Pepper, Brisk Lemon Tea</p>
+            <p class="muted">2L Bottles: Coke, Sprite</p>
+
+            <div class="divider"></div>
+
+            <h3 class="mt">Extras</h3>
+            <p class="muted">Ranch, Blue Cheese, BBQ, Honey BBQ, Marinara, Garlic Butter, Jalapeños, Hot Banana Peppers, Pepperoncini, Hot or Mild Giardiniera Peppers, Bella’s Breadstick Sauce</p>
+
+            <div class="divider"></div>
+
+            <h3 class="mt">Pasta</h3>
+            <ul class="items compact">
+              <li><span class="name">Baked Mostaccioli</span><span class="desc">Noodles topped with mozzarella and Bella’s homemade marinara. Served with garlic toast</span></li>
+              <li><span class="name">Chicken Parmesan</span><span class="desc">Mostaccioli noodles topped with breaded chicken, marinara, and mozzarella. Served with garlic toast</span></li>
+            </ul>
+          </article>
         </div>
-        <h3>Pasta</h3>
-        <p>Baked Mostaccioli • Chicken Parmesan</p>
-        <div class="menu-meta">Served with garlic toast</div>
-      </article>
 
-      <article class="menu-tile">
-        <div class="menu-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M4 9c2-4 14-4 16 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M5 11c2 3 12 3 14 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M6 13c1.5 4 10.5 4 12 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M7 15c1 4 8 4 10 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+        <div class="menu-foot">
+          <a class="small-link" href="assets/lil-bellas-full-menu.pdf" target="_blank" rel="noopener">Download the original menu PDF</a>
         </div>
-        <h3>Sandwiches</h3>
-        <p>Italian Beef Sub • Tenderloin</p>
-        <div class="menu-meta">Extras available • Try the sauces</div>
-      </article>
-    </div>
-
-    <div class="menu-actions">
-      <div class="menu-images" aria-label="Full menu images">
-  <figure class="menu-image">
-    <a href="assets/menu-1.jpg" target="_blank" rel="noopener">
-      <img src="assets/menu-1.jpg" alt="Lil Bella's Pizza menu page 1" loading="lazy" />
-    </a>
-    <figcaption>Menu — Page 1</figcaption>
-  </figure>
-
-  <figure class="menu-image">
-    <a href="assets/menu-2.jpg" target="_blank" rel="noopener">
-      <img src="assets/menu-2.jpg" alt="Lil Bella's Pizza menu page 2" loading="lazy" />
-    </a>
-    <figcaption>Menu — Page 2</figcaption>
-  </figure>
-</div>
-
-      <a class="btn secondary" href="#contact">Call to Order</a>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container contact-grid">
-    <div class="contact-card">
-      <h2>Delivery & Carry-Out</h2>
-      <p class="contact-big">
-        <a href="tel:8152201909">815-220-1909</a>
-      </p>
-      <p class="contact-small">
-        <strong>814 1st Street</strong>, LaSalle
-      </p>
-
-      <div class="hours">
-        <h3>Hours</h3>
-        <ul>
-          <li><span>Sunday–Monday</span><span>4:00–8:00</span></li>
-          <li><span>Thursday</span><span>4:00–9:00</span></li>
-          <li><span>Friday–Saturday</span><span>4:00–10:00</span></li>
-          <li><span>Tuesday–Wednesday</span><span class="closed">Closed</span></li>
-        </ul>
       </div>
+    </section>
 
-      <div class="contact-cta">
-        <a class="btn primary large" href="tel:8152201909">Call Now</a>
-        <a class="btn secondary large" href="assets/menu.pdf" target="_blank" rel="noopener">View Menu PDF</a>
+    <!-- Lunch / Specials placeholders -->
+    <section id="lunch" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Lunch</h2>
+          <p class="section-sub">We’ll match what you want here next (specials, combos, hours).</p>
+        </div>
+        <div class="card pad">
+          <p class="muted">Coming next.</p>
+        </div>
       </div>
+    </section>
 
-      <p class="contact-note">
-        *All delivery and carry-out times are estimated and not guaranteed.
-      </p>
-    </div>
-  </div>
-</section>
+    <section id="specials" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Specials</h2>
+          <p class="section-sub">We’ll add weekly deals and the “Facebook secret item” callout here.</p>
+        </div>
+        <div class="card pad">
+          <p class="muted">Coming next.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="about" class="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p>
-      At Lil’ Bella’s Pizza, we’re proud to be a mom-and-pop shop where every pizza is made with love, care, and attention to detail.
-      It all starts with our handmade dough, prepared fresh daily right here in our kitchen.
-    </p>
-  </div>
-</section>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Bella’s</h2>
+          <p class="section-sub">A mom-and-pop shop where every pizza is made with love, care, and attention to detail.</p>
+        </div>
 
-<footer class="footer">
-  <div class="container">
-    © 2025 Lil Bella’s Pizza · LaSalle, IL
-  </div>
-</footer>
+        <div class="card pad">
+          <p>
+            At Lil’ Bella’s Pizza, we’re proud to be a mom-and-pop shop, where every pizza is made with love, care, and attention to detail.
+            It all starts with our handmade dough, prepared fresh daily right here in our kitchen. Next, we add our signature pizza sauce — a rich,
+            flavorful blend that’s thicker and more robust than what you’ll find at other pizzerias.
+          </p>
+          <p>
+            We top our pizzas with only the freshest vegetables and premium meats, ensuring you can taste the quality in every bite.
+            And then there’s the cheese — 100% real Wisconsin mozzarella. It’s one of the finest (and yes, most expensive) cheeses available, but we believe you’re worth the very best.
+          </p>
+          <p>
+            Finally, we bake your pizza to perfection in our traditional deck oven, letting the flavors and seasonings mingle as they cook slowly to golden, bubbling perfection.
+            We don’t believe in rushing a good thing — and we think you’ll agree it’s worth the wait.
+          </p>
+          <p class="muted">
+            If you’re looking for a fast, flavorless pizza, you might not be the right fit. But if you want a handcrafted pizza that’s big on taste and made with love, we’d be thrilled to serve you.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">Call ahead for pickup or delivery. Catering available through BBQ_Catering.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card pad">
+            <h3>Delivery & Carry-Out</h3>
+            <p class="muted"><strong>Phone:</strong> <a href="tel:+18152201909">(815) 220-1909</a></p>
+            <p class="muted"><strong>Address:</strong> 814 1st Street, LaSalle</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://www.doordash.com/store/lil-bellas-pizza-la-salle-29955287/43664949/?pickup=true" target="_blank" rel="noopener">Order Online</a>
+              <a class="btn btn-secondary" href="tel:+18152201909">Call Now</a>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <h3>Hours</h3>
+            <ul class="hours">
+              <li><span>Sunday–Monday</span><span>4–8:00</span></li>
+              <li><span>Thursday</span><span>4–9:00</span></li>
+              <li><span>Friday–Saturday</span><span>4–10:00</span></li>
+              <li><span>Tuesday–Wednesday</span><span><strong>Closed</strong></span></li>
+            </ul>
+            <p class="muted small">Hours can be updated anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="dot"></span>
+          <span>© <span id="year"></span> Lil Bella’s Pizza</span>
+        </div>
+        <div class="footer-right">
+          <a href="bbq.html">BBQ_Catering</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

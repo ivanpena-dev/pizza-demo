@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter Bella’s</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="enter-page">
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Bella’s Pizza" class="logo-img" />
+      <span class="brand-name">Bella’s Pizza</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="bbq.html">BBQ Catering</a>
+    </nav>
+  </div>
+</header>
+
+<main class="enter-wrap section-offset">
+  <section class="enter-scene" id="scene">
+
+    <div class="enter-front" aria-hidden="true">
+      <div class="enter-sign">
+        <img src="assets/logo.png" alt="" />
+        <div class="enter-sign-text">
+          <div class="enter-sign-title">Bella’s Pizza</div>
+          <div class="enter-sign-sub">Tap to enter</div>
+        </div>
+      </div>
+
+      <button class="enter-door" id="doorBtn" aria-label="Enter Bella’s">
+        <span class="door-panel"></span>
+        <span class="door-handle"></span>
+      </button>
+    </div>
+
+    <div class="enter-inside" id="inside" aria-hidden="true">
+      <div class="inside-glow"></div>
+
+      <div class="menu-board">
+        <div class="menu-board-top">
+          <div class="menu-board-title">Welcome to Bella’s</div>
+          <div class="menu-board-actions">
+            <a class="btn secondary" href="assets/menu.pdf" target="_blank" rel="noopener">View Full Menu PDF</a>
+            <a class="btn primary" href="index.html#menu">Go to Website Menu</a>
+          </div>
+        </div>
+
+        <div class="menu-board-grid">
+          <div class="menu-board-card">
+            <h3>Specialty Pizzas</h3>
+            <p>Everything • Supreme • Smoked Ribeye • Chicken Parm</p>
+          </div>
+          <div class="menu-board-card">
+            <h3>Appetizers</h3>
+            <p>Breadsticks • Wings • Garlic Nuggets • Mozzarella Sticks</p>
+          </div>
+          <div class="menu-board-card">
+            <h3>Pasta</h3>
+            <p>Baked Mostaccioli • Chicken Parmesan</p>
+          </div>
+          <div class="menu-board-card">
+            <h3>Sandwiches</h3>
+            <p>Italian Beef • Tenderloin</p>
+          </div>
+        </div>
+
+        <div class="menu-board-footer">
+          <a class="btn primary large" href="tel:8152201909">Call to Order</a>
+          <a class="btn secondary large" href="index.html#contact">Hours & Location</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script>
+  const btn = document.getElementById('doorBtn');
+  const scene = document.getElementById('scene');
+  const inside = document.getElementById('inside');
+
+  btn.addEventListener('click', () => {
+    if (scene.classList.contains('entered')) return;
+    scene.classList.add('entering');
+
+    // Door animation -> then "inside" reveal
+    setTimeout(() => {
+      scene.classList.remove('entering');
+      scene.classList.add('entered');
+      inside.removeAttribute('aria-hidden');
+    }, 900);
+  });
+</script>
+
+</body>
+</html>

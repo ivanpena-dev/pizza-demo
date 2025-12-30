@@ -11,29 +11,30 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 <header class="navbar">
   <div class="container nav-inner">
     <div class="brand">
-      <img src="assets/logo.png" alt="Bella’s Pizza Logo" class="logo-img" />
+      <img src="assets/logo.png" alt="Bella’s Pizza" class="logo-img" />
       <span class="brand-name">Lil Bella’s Pizza</span>
     </div>
 
     <nav class="nav-links">
       <a href="#menu">Menu</a>
-      <a href="bbq.html">BBQ_Catering</a>
+      <a href="bbq.html">BBQ Catering</a>
+      <a href="#contact">Contact</a>
       <a href="#about">About</a>
-      <a href="#contact" class="btn">Order Now</a>
     </nav>
   </div>
 </header>
 
-<section class="hero hero-light section-offset">
+<section class="hero hero-light">
   <div class="container hero-grid-light">
 
     <div class="hero-text">
-      <span class="hero-eyebrow">LiL Bella’s Pizza</span>
+      <span class="hero-eyebrow">Lil Bella’s Pizza</span>
       <h1>Freshness<br>in every bite</h1>
       <p class="hero-sub">
         Life without pizza… <strong>I think not!</strong>
@@ -41,7 +42,7 @@
 
       <div class="hero-actions">
         <a href="#menu" class="btn primary">View Menu</a>
-        <a href="#contact" class="btn secondary">Order Online</a>
+        <a href="#contact" class="btn secondary">Order / Call</a>
       </div>
     </div>
 
@@ -52,49 +53,120 @@
   </div>
 </section>
 
+<section id="menu" class="menu">
+  <div class="container">
+    <h2>Menu Highlights</h2>
+    <p class="menu-lead">Easy favorites — full menu available below.</p>
 
-<section id="menu" class="menu reveal">
-  <h2>Signature Pizzas</h2>
+    <div class="menu-highlights">
+      <article class="menu-tile">
+        <div class="menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3c4.5 0 8.5 3 9.5 7.3L12 21 2.5 10.3C3.5 6 7.5 3 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M2.5 10.3H21.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Specialty Pizzas</h3>
+        <p>Everything • Supreme • Famous Smoked Ribeye • Chicken Parm</p>
+        <div class="menu-meta">Build Your Own • Thin • Deep Dish • Stuffed</div>
+      </article>
 
-  <div class="menu-grid">
-    <div class="card">
-      <h3>Pepperoni Classic</h3>
-      <p>Fresh mozzarella, house sauce, crispy pepperoni</p>
-      <span>$14</span>
+      <article class="menu-tile">
+        <div class="menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7 4c4 2 6 6 6 10s-2 8-6 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M17 4c-4 2-6 6-6 10s2 8 6 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Appetizers</h3>
+        <p>Breadsticks • Wings • Garlic Nuggets • Mozzarella Sticks</p>
+        <div class="menu-meta">Perfect for groups & game nights</div>
+      </article>
+
+      <article class="menu-tile">
+        <div class="menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7 6h10M6 10h12M7 14h10M8 18h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M6 4c-2 2-2 14 0 16s12 2 12 0 4-14 2-16-12-2-14 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Pasta</h3>
+        <p>Baked Mostaccioli • Chicken Parmesan</p>
+        <div class="menu-meta">Served with garlic toast</div>
+      </article>
+
+      <article class="menu-tile">
+        <div class="menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 9c2-4 14-4 16 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M5 11c2 3 12 3 14 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M6 13c1.5 4 10.5 4 12 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M7 15c1 4 8 4 10 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Sandwiches</h3>
+        <p>Italian Beef Sub • Tenderloin</p>
+        <div class="menu-meta">Extras available • Try the sauces</div>
+      </article>
     </div>
 
-    <div class="card">
-      <h3>Meat Lovers</h3>
-      <p>Sausage, bacon, pepperoni, mozzarella</p>
-      <span>$16</span>
-    </div>
-
-    <div class="card">
-      <h3>Garden Heat</h3>
-      <p>Roasted veggies, chili oil, vegan cheese</p>
-      <span>$15</span>
+    <div class="menu-actions">
+      <a class="btn primary" href="assets/menu.pdf" target="_blank" rel="noopener">Download Full Menu (PDF)</a>
+      <a class="btn secondary" href="#contact">Call to Order</a>
     </div>
   </div>
 </section>
 
-<section id="about" class="about reveal">
-  <h2>About Bella’s</h2>
-  <p>
-    Bella’s Pizza delivers bold flavor using fresh ingredients and time-tested
-    recipes. Built for families, nights out, and late-night cravings.
-  </p>
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <h2>Delivery & Carry-Out</h2>
+      <p class="contact-big">
+        <a href="tel:8152201909">815-220-1909</a>
+      </p>
+      <p class="contact-small">
+        <strong>814 1st Street</strong>, LaSalle
+      </p>
+
+      <div class="hours">
+        <h3>Hours</h3>
+        <ul>
+          <li><span>Sunday–Monday</span><span>4:00–8:00</span></li>
+          <li><span>Thursday</span><span>4:00–9:00</span></li>
+          <li><span>Friday–Saturday</span><span>4:00–10:00</span></li>
+          <li><span>Tuesday–Wednesday</span><span class="closed">Closed</span></li>
+        </ul>
+      </div>
+
+      <div class="contact-cta">
+        <a class="btn primary large" href="tel:8152201909">Call Now</a>
+        <a class="btn secondary large" href="assets/menu.pdf" target="_blank" rel="noopener">View Menu PDF</a>
+      </div>
+
+      <p class="contact-note">
+        *All delivery and carry-out times are estimated and not guaranteed.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="contact section-offset">
-  <h2>Ready to Order?</h2>
-  <p>Fast pickup · Local delivery · Open late</p>
-  <a href="#" class="btn primary large">Start Your Order</a>
+<section id="about" class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      At Lil’ Bella’s Pizza, we’re proud to be a mom-and-pop shop where every pizza is made with love, care, and attention to detail.
+      It all starts with our handmade dough, prepared fresh daily right here in our kitchen.
+    </p>
+  </div>
 </section>
 
 <footer class="footer">
-  © 2025 Bella’s Pizza · Demo Website
+  <div class="container">
+    © 2025 Lil Bella’s Pizza · LaSalle, IL
+  </div>
 </footer>
 
-<script src="app.js"></script>
 </body>
 </html>
